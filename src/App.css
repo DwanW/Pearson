@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  font-family:'Roboto', sans-serif;
+}
+.App-header {
+  font-size: 24px;
+}
+
+#main-panel{
+  display:flex;
+  border: 1px solid white;
+  min-height: 70vh;
+  min-width: 650px;
+}
+
+@media only screen and (max-width: 800px) {
+ #main-panel {
+   flex-direction: column;
+   min-width:500px;
+ }
+}
+
+#left-panel {
+  display:flex;
+  flex-direction: column;
+  background-color:#4a505e;
+  flex-basis: 500px;
+}
+
+#data-list {
+  -webkit-flex-basis: 100px; 
+  flex-basis: 250px;
+  border-left: 1px white solid;
+  overflow-y: scroll;
+  height: 70vh
+}
+
+@media only screen and (max-width: 800px) {
+  #data-list {
+    border-left: none;
+    border-top: 1px white solid;
+  }
+ }
+
+#data-list::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+#data-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+#data-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.data-points{
+  border-bottom: groove 1px white;
+}
+
+#input-panel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 150px;
+  width:100%;
+  border-bottom: 1px white solid;
+}
+
+#input-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+input {
+  width: 150px;
+  margin-left: 10px;
+  border:none;
+  color: black;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number]:focus {
+  background-color: rgb(101, 169, 192);
+}
+
+#plot-title{
+  margin-top: 20px;
+}
+
+/*buttons style*/
+button {
+  border: solid 1px white;
+  background-color: black;
+  color: white;
+  margin: 5px;
+  font-size: 16px;
+  padding: 3px;
+}
+button:hover {
+  border: solid 1px black;
+  background-color:white;
+  color:black;
+  transition: 0.3s;
+}
+
+/*list style */
+#result-section {
+  min-width: 650px;
+  border:solid 1px white;
+  border-top:none;
+}
+
+@media only screen and (max-width: 800px) {
+  #graph svg{
+    transform: scale(1.2);
+  }
+  #result-section {
+    min-width: 500px;
+  }
+ }
+ul {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 520px) {
+  #main-panel {
+    min-width: 100px;
+  }
+  #result-section {
+    min-width: 100px;
+    border:none;
+  }
+  
+  #graph {
+    display:flex;
+    justify-content: flex-start;
+  }
+
+  #graph svg{
+    transform: scale(0.75);
+    width: 400px;
+  }
+ }

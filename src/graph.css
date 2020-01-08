@@ -1,0 +1,9 @@
+.dot {
+    fill: white;
+}
+.dot:hover {
+    fill: rgba(91, 235, 103, 0.8)
+}
+p {
+    background-color: #4a505e
+}
